@@ -7,7 +7,7 @@
 #' @export
 create_slides <- function(path, event, date) {
   # create RStudio project
-  invisible(capture.output(
+  invisible(utils::capture.output(
     usethis::create_project(path, rstudio = TRUE, open = FALSE)
   ))
   # I put my R code to /src instead of /R
