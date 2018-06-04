@@ -5,8 +5,15 @@ Authors@R: person("Earo", "Wang", , "earo.wang@gmail.com", c("aut", "cre"))
 Description: Miscellaneous functions help setup my projects.
 License: MIT + file LICENSE
 Imports: 
+    emo,
+    icon,
+    svglite,
     usethis,
-    whisker
+    whisker,
+    xaringan
+Remotes: 
+    hadley/emo,
+    ropenscilabs/icon
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
