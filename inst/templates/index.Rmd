@@ -22,7 +22,7 @@ opts_chunk$set(
   fig.width = 12, fig.height = 11, fig.show = 'hold', 
   cache = TRUE, external = TRUE, dev = 'svglite'
 )
-read_chunk('src/theme.R')
+read_chunk('R/theme.R')
 ```
 
 ```{r theme-remark}
