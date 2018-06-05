@@ -38,6 +38,7 @@ create_slides <- function(path, event, date) {
 
   # init index.Rmd
   write_template(path, "index.Rmd", list(date = date))
+  invisible(TRUE)
 }
 
 write_template <- function(path, file, data = list()) {

@@ -7,3 +7,4 @@ Automate my own project setup, tailored from the **usethis** package:
 
   - `create_slides()`
   - `create_package()`
+  - `create_project()`
