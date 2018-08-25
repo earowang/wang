@@ -3,12 +3,15 @@
 #' @param path A path.
 #' @param event A string. Which event.
 #' @param date A string. On which day of the event.
+#' @param ratio A choice of "normal" (4:3) or "wide" (16:9).
 #'
 #' @export
-create_slides <- function(path, event, date) {
+create_slides <- function(path, event, date, ratio = "normal") {
   dir.create(path)
   path <- normalizePath(path, mustWork = TRUE)
   usethis::proj_set(path, force = TRUE)
+
+  ratio <- match.arg(ratio, c("normal", "wide"))
 
   # create RStudio project
   usethis::use_rstudio()
@@ -30,13 +33,16 @@ create_slides <- function(path, event, date) {
   file.copy(makefile_path, paste0(path, "/Makefile"))
 
   # use my custom xaringan css
-  css_path <- use_template("remark.css")
+  if (ratio == "normal") {
+    css_path <- use_template("remark.css")
+  } else {
+    css_path <- use_template("remark-wide.css")
+  }
   file.copy(css_path, paste0(path, "/remark.css"))
 
   # init README.md
   write_template(path, "README.md", list(event = event, date = date))
 
-  # init index.Rmd
   write_template(path, "index.Rmd", list(date = date))
   invisible(TRUE)
 }
