@@ -4,4 +4,4 @@
 
 Slides for {{{ event }}} on {{{ date }}}.
 
-Rendered slides: <http://slides.earo.me/{{{ repo }}}>
+Rendered slides: <https://slides.earo.me/{{{ repo }}}>

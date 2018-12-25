@@ -2,11 +2,12 @@
 title: "Title"
 type: "seminar"
 author: "Earo Wang"
-date: "{{{ date }}} <br> slides at <http://slides.earo.me/{{{ repo }}}>"
+date: "{{{ date }}} <br> slides at [slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})"
 output:
   xaringan::moon_reader:
-    css: ["default", "remark.css"]
-    self_contained: false
+    chakra: libs/remark-latest.min.js
+    css: ["libs/remark.css""]
+    lib_dir: libs
     nature:
       ratio: 16:9
       highlightStyle: github

@@ -4,3 +4,5 @@ render:
 serve:
 	Rscript -e 'Sys.setenv("RSTUDIO_PANDOC" = "/Applications/RStudio.app/Contents/MacOS/pandoc"); xaringan::infinite_moon_reader("index.Rmd")'
 
+deploy:
+	zsh deploy.sh
