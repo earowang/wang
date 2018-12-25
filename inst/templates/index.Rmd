@@ -36,8 +36,8 @@ read_chunk('R/theme.R')
 
 class: inverse middle center
 
-### Slides created via xaringan `r emo::ji("crossed_swords")` <http://slides.earo.me/{{{ repo }}}>
+### Slides created via xaringan `r emo::ji("crossed_swords")` [slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})
 
-### Open source <https://github.com/earowang/{{{ repo }}}>
+### Open source [github.com/earowang/{{{ repo }}}](https://github.com/earowang/{{{ repo }}})
 
 ### This work is under licensed [<i class="fab fa-creative-commons"></i> BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
