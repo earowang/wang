@@ -6,7 +6,7 @@ date: "{{{ date }}} <br> slides at [slides.earo.me/{{{ repo }}}](https://slides.
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: ["libs/remark.css""]
+    css: ["libs/remark.css"]
     lib_dir: libs
     nature:
       ratio: 16:9
