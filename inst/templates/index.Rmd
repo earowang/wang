@@ -2,10 +2,9 @@
 title: "Title"
 type: "seminar"
 author: "Earo Wang"
-date: "{{{ date }}} <br> slides at [slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})"
+date: "[slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})"
 output:
   xaringan::moon_reader:
-    chakra: libs/remark-latest.min.js
     css: ["libs/remark.css"]
     lib_dir: libs
     nature:
@@ -21,8 +20,7 @@ options(htmltools.dir.version = FALSE, tibble.width = 60, tibble.print_min = 6)
 opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
   fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center', 
-  fig.width = 12, fig.show = 'hold',
-  fig.height = 8.5, # 16:9
+  fig.width = 12, fig.show = 'hold', fig.height = 8.5, # 16:9
   # fig.height = 11, # 4:3
   cache = TRUE, external = TRUE, dev = 'svglite'
 )
@@ -31,13 +29,3 @@ read_chunk('R/theme.R')
 
 ```{r theme-remark}
 ```
-
----
-
-class: inverse middle center
-
-### Slides created via xaringan `r emo::ji("crossed_swords")` [slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})
-
-### Open source [github.com/earowang/{{{ repo }}}](https://github.com/earowang/{{{ repo }}})
-
-### This work is under licensed [<i class="fab fa-creative-commons"></i> BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).

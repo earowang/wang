@@ -1,5 +1,8 @@
+/* colour scheme */
+/* http://metrocolor.live */
 @import url('https://fonts.googleapis.com/css?family=Assistant:400,700');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Rosario');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600);
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
@@ -7,19 +10,18 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 h1, h2, h3 {
-  font-family: 'PT Sans Narrow', sans-serif;
   margin-bottom: 0;
 }
-.remark-slide-content h1 { font-size: 40px; }
-.remark-slide-content h2 { font-size: 38px; }
-.remark-slide-content h3 { font-size: 32px; }
+.remark-slide-content h1 { font-size: 68px; }
+.remark-slide-content h2 { font-size: 58px; }
+.remark-slide-content h3 { font-size: 48px; }
 .remark-slide-content {
-  background-color: #fff;
+  background-color: #f2f1f6;
   background-position: center;
   background-repeat: no-repeat;
   display: table-cell;
-  font-size: 26px;
-  padding: 0em 3.2em;
+  font-size: 38px;
+  padding: 0px 30px;
 }
 .footnote {
   position: absolute;
@@ -37,7 +39,7 @@ ul li:before {
   content: "\f201";
   font-family: "Font Awesome\ 5 Free";
   margin-right: 10px;
-  color: #3F88C5;
+  color: #4ba946;
   font-weight: 900;
 }
 ul li li:before {
@@ -59,10 +61,11 @@ ul li li:before {
   font-weight: 900;
 }
 
-.red { color: #D00000; }
-.orange { color: #FFBA08; }
-.blue { color: #3F88C5; }
-.large { font-size: 30px; }
+.red { color: #be3223; }
+.orange { color: #f57125; }
+.blue { color: #22b6ed; }
+.green { color: #1fb27f; }
+.large { font-size: 120%; }
 .center {
   text-align: center;
 }
@@ -73,13 +76,14 @@ ul li li:before {
 }
 a, a > code {
   text-decoration: none;
+  color: #f45f7c;
 }
 code {
   background: #f8f8f8;
   border-radius: 5px;
 }
-.remark-code, .remark-inline-code { font-family: 'Source Code Pro'; font-size: 70%; }
-.remark-code, .remark-code-line { font-family: 'Source Code Pro'; font-size: 88%; }
+.remark-code, .remark-inline-code { font-family: 'Source Code Pro'; font-size: 80%; }
+.remark-code, .remark-code-line { font-family: 'Source Code Pro'; font-size: 85%; }
 .remark-code-line-highlighted {
   background-color: #fee8c8;
 }
@@ -102,14 +106,15 @@ code {
   padding: 15px;
 }
 .inverse {
-  background: linear-gradient(0deg, rgb(115, 115, 130), rgb(18, 11, 49));
-  /* background: rgb(18, 11, 49); */
-  color: rgb(223, 73, 66);
-  text-shadow: 0 0 20px #333;
+  background: #69686d;
+  color: #f2f2f6;
+}
+.inverse a {
+  color: #b2d68c;
 }
 .inverse h1, .inverse h2 {
-  color: #FFBA08;
-  font-size: 62px;
+  color: #f2f2f6;
+  font-size: 58px;
   line-height: 1.2em;
 }
 
@@ -165,9 +170,73 @@ code {
 }
 
 .title-slide {
-  font-size: 32px;
+  background: #4dc7ec;
+}
+
+.title-slide h1 {
+  font-family: 'Rosario', sans-serif;
+  font-size: 120px;
+  line-height: 1.2em;
+  color: #f2f1f6;
+  margin-top: -10px;
+  margin-left: -900px;
+}
+
+.title-slide h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 62px;
+  color: #f8c9cb;
+  margin-right: -900px;
 }
 
 .title-slide .remark-slide-number {
   display: none;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 50px 10px;
+  padding: 10px 30px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-style: italic;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.alert {
+  display: inline-block;
+  border-color: #be3223;
+  border-width: 2px;
+  border-style: solid;
+  margin: 28px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.card {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 #00000033;
+  transition: all 0.2s ease-out;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px;
+}
+
+.card img {
+  display: block;
+  padding-bottom: 10px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }

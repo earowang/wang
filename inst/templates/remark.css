@@ -31,7 +31,7 @@ h1, h2, h3 {
 }
 li { line-height: 1.85em; }
 li p { line-height: 1.25em; }
-li {
+ul li {
   list-style-type: none;
 }
 ul li:before {
