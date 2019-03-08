@@ -6,15 +6,13 @@ Description: Miscellaneous functions help setup my projects.
 License: MIT + file LICENSE
 Imports: 
     emo,
-    icon,
     knitr,
     svglite,
     usethis,
     whisker,
     xaringan
 Remotes: 
-    hadley/emo,
-    ropenscilabs/icon
+    hadley/emo
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
