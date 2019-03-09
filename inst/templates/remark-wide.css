@@ -32,7 +32,23 @@ h1, h2, h3 {
 
 li { line-height: 1.65em; }
 li p { line-height: 1.25em; }
-li {
+ol {
+	list-style: none; 
+	counter-reset: li;
+}
+ol li {
+	counter-increment: li
+}
+ol li::before {
+	content: ". "counter(li); 
+  color: #a84d18;
+	display: inline-block; 
+	width: 1em;
+	margin-right: 0.5em; 
+	text-align: right; 
+	direction: rtl;
+}
+ul li {
   list-style-type: none;
 }
 ul li:before {
@@ -114,7 +130,7 @@ code {
 }
 .inverse h1, .inverse h2 {
   color: #f2f2f6;
-  font-size: 58px;
+  font-size: 68px;
   line-height: 1.2em;
 }
 
@@ -187,6 +203,7 @@ code {
   font-size: 62px;
   color: #f8c9cb;
   margin-right: -900px;
+  border-top: 5px solid #f2f1f6;
 }
 
 .title-slide .remark-slide-number {
