@@ -12,8 +12,10 @@ create_project <- function(path) {
   usethis::use_rstudio()
   usethis::use_git_ignore(c(".DS_Store"))
 
-  # I put my R code to /R
+  # I put my resuable functions to /R
   usethis::use_directory("R")
+  # I put my analysis code to /scripts
+  usethis::use_directory("scripts")
   # I put data /data
   usethis::use_directory("data")
 

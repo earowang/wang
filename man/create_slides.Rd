@@ -4,7 +4,7 @@
 \alias{create_slides}
 \title{Create xaringan slides}
 \usage{
-create_slides(path, event, date, ratio = "normal")
+create_slides(path, event, date)
 }
 \arguments{
 \item{path}{A path.}
@@ -12,8 +12,6 @@ create_slides(path, event, date, ratio = "normal")
 \item{event}{A string. Which event.}
 
 \item{date}{A string. On which day of the event.}
-
-\item{ratio}{A choice of "normal" (4:3) or "wide" (16:9).}
 }
 \description{
 Create xaringan slides
