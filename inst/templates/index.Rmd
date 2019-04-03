@@ -1,8 +1,8 @@
 ---
 title: "Title"
 type: "seminar"
-author: "Earo Wang"
-date: "[slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})"
+author: "Earo Wang @earowang"
+date: ""
 output:
   xaringan::moon_reader:
     css: ["libs/remark.css"]
@@ -12,6 +12,11 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
 ---
 
 ```{r initial, echo = FALSE, cache = FALSE, results = 'hide'}
@@ -20,8 +25,7 @@ options(htmltools.dir.version = FALSE, tibble.width = 60, tibble.print_min = 6)
 opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
   fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center', 
-  fig.width = 12, fig.show = 'hold', fig.height = 8.5, # 16:9
-  # fig.height = 11, # 4:3
+  fig.width = 12, fig.show = 'hold', fig.height = 8.5,
   cache = TRUE, external = TRUE, dev = 'svglite'
 )
 read_chunk('R/theme.R')
@@ -29,3 +33,7 @@ read_chunk('R/theme.R')
 
 ```{r theme-remark}
 ```
+
+---
+
+[slides.earo.me/{{{ repo }}}](https://slides.earo.me/{{{ repo }}})
