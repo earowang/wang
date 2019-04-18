@@ -2,7 +2,7 @@
 % Please edit documentation in R/project.R
 \name{create_project}
 \alias{create_project}
-\title{Create project for data analysis}
+\title{Create project for research articles and data analyses}
 \usage{
 create_project(path)
 }
@@ -10,5 +10,5 @@ create_project(path)
 \item{path}{A path.}
 }
 \description{
-Create project for data analysis
+Create project for research articles and data analyses
 }

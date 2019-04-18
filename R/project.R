@@ -1,4 +1,4 @@
-#' Create project for data analysis
+#' Create project for research articles and data analyses
 #'
 #' @param path A path.
 #'
@@ -12,11 +12,17 @@ create_project <- function(path) {
   usethis::use_rstudio()
   usethis::use_git_ignore(c(".DS_Store"))
 
+  # DESCRIPTION
+  usethis::use_description_defaults()
+  # MIT license for code
+  usethis::use_mit_license("Earo Wang")
   # I put my resuable functions to /R
   usethis::use_directory("R")
   # I put my analysis code to /scripts
   usethis::use_directory("scripts")
-  # I put data /data
+  # I put raw data /data-raw
+  usethis::use_directory("data-raw")
+  # I put cleaned data /data
   usethis::use_directory("data")
 
   invisible(TRUE)
