@@ -12,10 +12,8 @@ create_project <- function(path) {
   usethis::use_rstudio()
   usethis::use_git_ignore(c(".DS_Store"))
 
-  # DESCRIPTION
-  usethis::use_description_defaults()
-  # MIT license for code
-  usethis::use_mit_license("Earo Wang")
+  # README
+  usethis::use_readme_rmd(open = FALSE)
   # I put my resuable functions to /R
   usethis::use_directory("R")
   # I put my analysis code to /scripts
