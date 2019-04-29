@@ -4,14 +4,10 @@
 \alias{create_slides}
 \title{Create xaringan slides}
 \usage{
-create_slides(path, event, date)
+create_slides(path)
 }
 \arguments{
 \item{path}{A path.}
-
-\item{event}{A string. Which event.}
-
-\item{date}{A string. On which day of the event.}
 }
 \description{
 Create xaringan slides

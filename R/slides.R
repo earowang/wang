@@ -1,11 +1,9 @@
 #' Create xaringan slides
 #'
 #' @param path A path.
-#' @param event A string. Which event.
-#' @param date A string. On which day of the event.
 #'
 #' @export
-create_slides <- function(path, event, date) {
+create_slides <- function(path) {
   dir.create(path)
   path <- normalizePath(path, mustWork = TRUE)
   usethis::proj_set(path, force = TRUE)
@@ -18,8 +16,6 @@ create_slides <- function(path, event, date) {
 
   # DESCRIPTION
   usethis::use_description_defaults()
-  # MIT license for code
-  usethis::use_mit_license("Earo Wang")
   # I put raw data /data-raw
   usethis::use_directory("data-raw")
   # I put cleaned data /data
@@ -32,50 +28,37 @@ create_slides <- function(path, event, date) {
 
   # use custom ggplot theme for slides
   usethis::use_directory("R")
-  r_path <- use_template("theme.R")
+  r_path <- use_template("slides/theme.R")
   file.copy(r_path, paste0(path, "/R/theme.R"))
 
   # use Makefile
-  makefile_path <- use_template("slides-Makefile")
+  makefile_path <- use_template("slides/Makefile")
   file.copy(makefile_path, paste0(path, "/Makefile"))
 
   # use deploy.sh
-  sh_path <- use_template("deploy.sh")
+  sh_path <- use_template("slides/deploy.sh")
   file.copy(sh_path, paste0(path, "/deploy.sh"))
 
   # use my custom xaringan css
-  css_path <- use_template("remark.css")
+  css_path <- use_template("slides/remark.css")
   file.copy(css_path, paste0(path, "/libs/remark.css"))
 
   # init README.md
-  write_template(path, "README.md", list(event = event, date = date))
+  write_template(path, "slides/README.md", dest = "README.md")
 
-  write_template(path, "index.Rmd", list(date = date))
+  write_template(path, "slides/index.Rmd", dest = "index.Rmd")
   invisible(TRUE)
 }
 
-write_template <- function(path, file, data = list()) {
+write_template <- function(path, file, dest) {
   temp_path <- system.file("templates", file, package = "wang")
   file_name <- readLines(temp_path)
   repo <- basename(path)
-  data <- c(data, repo = repo)
-  done <- strsplit(whisker::whisker.render(file_name, data), "\n")[[1]]
-  write_utf8(paste0(path, "/", file), done)
+  data <- list(repo = repo)
+  done <- whisker::whisker.render(file_name, data)
+  usethis::write_over(paste0(path, "/", dest), done, quiet = TRUE)
 }
 
 use_template <- function(file) {
   system.file("templates", file, package = "wang")
-}
-
-# usethis:::write_utf8
-write_utf8 <- function (path, lines) {
-  stopifnot(is.character(path))
-  stopifnot(is.character(lines))
-  con <- file(path, encoding = "utf-8")
-  on.exit(close(con), add = TRUE)
-  if (length(lines) > 1) {
-    lines <- paste0(lines, "\n", collapse = "")
-  }
-  cat(lines, file = con, sep = "")
-  invisible(TRUE)
 }

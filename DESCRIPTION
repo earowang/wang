@@ -1,6 +1,6 @@
 Package: wang
 Title: Earo Wang's Miscellaneous Functions
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person("Earo", "Wang", , "earo.wang@gmail.com", c("aut", "cre"))
 Description: Miscellaneous functions help setup my projects.
 License: MIT + file LICENSE

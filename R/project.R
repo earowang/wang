@@ -13,7 +13,7 @@ create_project <- function(path) {
   usethis::use_git_ignore(c(".DS_Store"))
 
   # README
-  usethis::use_readme_rmd(open = FALSE)
+  usethis::use_readme_md(open = FALSE)
   # I put my resuable functions to /R
   usethis::use_directory("R")
   # I put my analysis code to /scripts
