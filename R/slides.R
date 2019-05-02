@@ -12,7 +12,7 @@ create_slides <- function(path) {
   usethis::use_rstudio()
 
   # git ignore
-  usethis::use_git_ignore(c(".DS_Store", "cache/", "*.run.xml"))
+  usethis::use_git_ignore(c("cache/", "*.run.xml"))
 
   # DESCRIPTION
   usethis::use_description_defaults()

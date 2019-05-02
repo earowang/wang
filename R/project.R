@@ -10,7 +10,7 @@ create_project <- function(path) {
 
   # create RStudio project
   usethis::use_rstudio()
-  usethis::use_git_ignore(c(".DS_Store"))
+  # usethis::use_git_ignore(c(".DS_Store"))
 
   # README
   usethis::use_readme_md(open = FALSE)

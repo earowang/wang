@@ -6,6 +6,7 @@ Description: Miscellaneous functions help setup my projects.
 License: MIT + file LICENSE
 Imports: 
     emo,
+    here,
     knitr,
     svglite,
     usethis,
