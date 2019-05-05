@@ -8,6 +8,7 @@ create_package <- function(path) {
   usethis::use_git_ignore(c("docs"))
   usethis::use_readme_rmd(open = FALSE)
   usethis::use_build_ignore(c("Makefile", "docs", "_pkgdown.yml"))
+  usethis::use_testthat()
 
   # use Makefile
   makefile_path <- use_template("package/Makefile")
