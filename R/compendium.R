@@ -15,7 +15,7 @@ create_compendium <- function(path) {
   # README
   usethis::use_readme_md(open = FALSE)
   rmarkdown::draft(
-    "index.Rmd", 
+    paste0(path, "/index.Rmd"), 
     template = "workingpaper", 
     package = "MonashEBSTemplates", 
     create_dir = FALSE, 
