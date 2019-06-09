@@ -14,6 +14,10 @@ create_compendium <- function(path) {
 
   # README
   usethis::use_readme_md(open = FALSE)
+  # use Makefile
+  makefile_path <- use_template("compendium/Makefile")
+  file.copy(makefile_path, paste0(path, "/Makefile"))
+  # use rmarkdown
   rmarkdown::draft(
     paste0(path, "/index.Rmd"), 
     template = "workingpaper", 
@@ -31,6 +35,8 @@ create_compendium <- function(path) {
   usethis::use_directory("data-raw")
   # I put cleaned data /data
   usethis::use_directory("data")
+  # DESCRIPTION
+  write_template(path, "compendium/DESCRIPTION", dest = "DESCRIPTION")
 
   invisible(TRUE)
 }
