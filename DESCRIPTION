@@ -8,6 +8,7 @@ Imports:
     emo,
     here,
     knitr,
+    rmarkdown,
     svglite,
     usethis,
     whisker,
