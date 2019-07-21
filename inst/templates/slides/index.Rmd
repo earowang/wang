@@ -1,7 +1,7 @@
 ---
 title: "Title"
 type: "seminar"
-author: "Earo Wang @earowang"
+author: "Earo Wang"
 date: ""
 output:
   xaringan::moon_reader:
@@ -19,7 +19,7 @@ output:
         </div>
 ---
 
-```{r setup, includes = FALSE, echo = FALSE}
+```{r setup, include = FALSE, echo = FALSE}
 options(htmltools.dir.version = FALSE, tibble.width = 60, tibble.print_min = 6)
 knitr::opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
