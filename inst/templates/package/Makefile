@@ -10,6 +10,9 @@ build:
 test:
 	Rscript -e "devtools::test()"
 
+tidy:
+	Rscript -e "usethis::use_tidy_description()"
+
 check:
 	Rscript -e "devtools::check()"
 
