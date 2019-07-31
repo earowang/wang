@@ -14,6 +14,6 @@ knitr::opts_chunk$set(
 knitr::opts_knit$set(root.dir = here::here())
 ```
 
-```{r external, include = FALSE}
+```{r external, include = FALSE, cache = FALSE}
 knitr::read_chunk('scripts/index.R')
 ```
