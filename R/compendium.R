@@ -14,17 +14,11 @@ create_compendium <- function(path) {
 
   # README
   usethis::use_readme_md(open = FALSE)
-  # use Makefile
-  makefile_path <- use_template("compendium/Makefile")
-  file.copy(makefile_path, paste0(path, "/Makefile"))
-  # use pre-commit hooks
-  pre_commit_path <- use_template("compendium/.pre-commit-config.yaml")
-  file.copy(pre_commit_path, paste0(path, "/.pre-commit-config.yaml"))
   # use rmarkdown
   rmarkdown::draft(
     paste0(path, "/index.Rmd"), 
     template = "workingpaper", 
-    package = "MonashEBSTemplates", 
+    package = "auckland.uni.templates", 
     create_dir = FALSE, 
     edit = FALSE
   )

@@ -8,7 +8,7 @@ create_lecture <- function(path) {
   path <- normalizePath(path, mustWork = TRUE)
 
   # git ignore
-  usethis::use_git_ignore(c("cache/", "*.run.xml", "Makefile"))
+  usethis::use_git_ignore(c("cache/", "*.run.xml"))
 
   # I put raw data /data-raw
   usethis::use_directory("data-raw")
@@ -25,10 +25,6 @@ create_lecture <- function(path) {
   # use custom ggplot theme for slides
   r_path <- use_template("slides/theme.R")
   file.copy(r_path, paste0(path, "/R/theme.R"))
-
-  # use Makefile
-  makefile_path <- use_template("slides/Makefile")
-  file.copy(makefile_path, paste0(path, "/Makefile"))
 
   # use my custom xaringan css
   css_path <- use_template("lecture/remark.css")

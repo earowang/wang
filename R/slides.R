@@ -32,10 +32,6 @@ create_slides <- function(path) {
   r_path <- use_template("slides/theme.R")
   file.copy(r_path, paste0(path, "/R/theme.R"))
 
-  # use Makefile
-  makefile_path <- use_template("slides/Makefile")
-  file.copy(makefile_path, paste0(path, "/Makefile"))
-
   # use deploy.sh
   sh_path <- use_template("slides/deploy.sh")
   file.copy(sh_path, paste0(path, "/deploy.sh"))
