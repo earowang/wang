@@ -25,7 +25,7 @@ options(htmltools.dir.version = FALSE, tibble.width = 60, tibble.print_min = 6)
 opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
   fig.path = 'figure/', fig.align = 'center', fig.height = 8.5,
-  out.width = '100%', fig.show = 'hold', fig.retina = 2,
+  out.width = '100%', fig.show = 'hold', fig.retina = 3,
   cache = TRUE, cache.path = 'cache/'
 )
 ```
