@@ -18,7 +18,7 @@ output:
 
 class: middle center inverse
 
-```{r initial, echo = FALSE, cache = FALSE, results = 'hide'}
+```{r setup, echo = FALSE, cache = FALSE, results = 'hide'}
 library(knitr)
 options(
   htmltools.dir.version = FALSE, tibble.width = 60, tibble.print_min = 6,
