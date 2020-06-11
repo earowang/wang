@@ -6,14 +6,14 @@ author: "Earo Wang <br> The University of Auckland"
 date: ""
 output:
   xaringan::moon_reader:
-    includes:
-      after_body: "libs/collapseoutput.js"
     css: ["libs/remark.css"]
     lib_dir: libs
     nature:
+      ratio: 16:9
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      beforeInit: "libs/macros.js"
 ---
 
 class: middle center inverse
@@ -27,8 +27,8 @@ options(
 opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE, comment = "#>",
   fig.path = 'figure/', cache.path = 'cache/', fig.align = 'center', 
-  fig.width = 12, fig.height = 8.5, fig.show = 'hold',
-  cache = TRUE, dev = 'svglite'
+  fig.width = 12, fig.height = 8.5, fig.show = 'hold', fig.retina = 3,
+  cache = TRUE,
 )
 ```
 

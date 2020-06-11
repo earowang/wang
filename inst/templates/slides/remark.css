@@ -96,10 +96,6 @@ ul li li:before {
   text-align: center;
 }
 
-img {
-  width: 100%;
-}
-
 a, a > code {
   text-decoration: none;
   color: #f45f7c;

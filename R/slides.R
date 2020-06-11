@@ -38,6 +38,10 @@ create_slides <- function(path) {
   css_path <- use_template("slides/remark.css")
   file.copy(css_path, paste0(path, "/libs/remark.css"))
 
+  # use macros.js
+  js_path <- use_template("slides/macros.js")
+  file.copy(js_path, paste0(path, "/libs/macros.js"))
+
   # init README.md
   write_template(path, "slides/README.md", dest = "README.md")
 

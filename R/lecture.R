@@ -30,9 +30,9 @@ create_lecture <- function(path) {
   css_path <- use_template("lecture/remark.css")
   file.copy(css_path, paste0(path, "/libs/remark.css"))
 
-  # use custom js
-  js_path <- use_template("lecture/collapseoutput.js")
-  file.copy(js_path, paste0(path, "/libs/collapseoutput.js"))
+  # use macros.js
+  js_path <- use_template("slides/macros.js")
+  file.copy(js_path, paste0(path, "/libs/macros.js"))
 
   write_template(path, "lecture/index.Rmd", dest = "index.Rmd")
   invisible(TRUE)
