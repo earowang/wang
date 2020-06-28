@@ -18,7 +18,7 @@ create_compendium <- function(path) {
   rmarkdown::draft(
     paste0(path, "/index.Rmd"), 
     template = "workingpaper", 
-    package = "auckland.uni.templates", 
+    package = "UOARmdTemplates", 
     create_dir = FALSE, 
     edit = FALSE
   )
